@@ -1,0 +1,2 @@
+class button(object):
+	def __iniy__(self, size_of_button, shape_of_button, location_of_button, 
