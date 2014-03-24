@@ -1,11 +1,18 @@
 import pygame as pg
 import imagesclass
+import buttonclass
+
+
+
 if __name__=="__main__":
 	pg.init()
-	main_screen = pg.display.set_mode((400, 400))
+	main_screen = pg.display.set_mode((600, 600))
 	main_screen.fill((255,255,255))
 	image1=imagesclass.image(100, 100, "pygame_tiny.png")
 	image1.draw_image(main_screen)
+	button1=buttonclass.button(500, 100, 50, 50, "Butsdasdfsdfton1", 1, (255, 0, 0))
+	button1.draw_button(main_screen)
+
 	while True: 
         	ev = pg.event.poll()
         	if ev.type == pg.QUIT: 
@@ -14,5 +21,10 @@ if __name__=="__main__":
             		x, y = ev.pos
            		if image1.image_surface.collidepoint(x, y):
 				image1.clear_images(main_screen)
+        	if ev.type == pg.MOUSEBUTTONDOWN:
+            		x, y = ev.pos
+           		if button1.button_surface.collidepoint(x, y):
+				image1.clear_button(main_screen)
+		
 		pg.display.flip()
  
