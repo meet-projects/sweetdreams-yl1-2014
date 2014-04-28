@@ -18,7 +18,8 @@ if __name__=="__main__":
     image1.draw_image(main_screen)
     button1=buttonclass.button(200, 300, 200, 60, " Enter ", 90, (0, 191, 255))
     buttonclass.button.draw_button(button1, main_screen)
-    label1 = labels.label((0,0,0), 200, 200, 175, 100, "Welcome To Sweet Dreams", 25)
+    print ""
+    label1 = labels.label((123,43,200), 200, 200, 40, 100, "Welcome To Sweet Dreams", 60)
     label1.draw_label(main_screen)
 
     numcc = 0
