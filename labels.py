@@ -10,9 +10,13 @@ class label(object):
 		self.text = label_text
 	def draw_label(self, place):
 		self.label_rec = pg.Rect(self.locationx, self.locationy, self.sizex, self.sizey)
+<<<<<<< HEAD
 		self.label = pg.font.Font(Arial, label_fontsize)
+=======
+		self.label = pg.font.Font(None, self.fontsize)
+>>>>>>> FETCH_HEAD
 		self.label = self.label.render(self.text, 1, self.colorl, (255, 255, 255))
-		main_screen.blit(self.label, self.label_rec)
+		place.blit(self.label, self.label_rec)
 	def clear_label(self, place):
 		clear_label_surface = pg.Surface([self.sizex,self.sizey])
 		clear_label_surface.fill((255,255,255))
