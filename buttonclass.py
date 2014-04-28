@@ -12,10 +12,10 @@ class button(object):
 	
 	def draw_button(self, place):
 		buttonlabel = pg.font.Font(None, self.txtsize)
+		size = buttonlabel.size(self.textb)
 		self.buttonlabel = buttonlabel.render(self.textb, 1, self.colorb, (44, 44, 44))
-		self.button_rec = pg.Rect(self.xlocb, self.ylocb,self.widthb, self.heightb)
-		print [self.buttonlabel.get_width(), self.buttonlabel.get_height()]
-		self.button_surface = pg.Surface([self.buttonlabel.get_width(), self.buttonlabel.get_height()])
+		self.button_rec = pg.Rect(self.xlocb, self.ylocb, size[0], size[1])
+		self.button_surface = pg.Surface(size)
 		self.button_surface.fill(self.colorb)		
 		place.blit(self.button_surface, self.button_rec)
 		place.blit(self.buttonlabel, self.button_rec)
