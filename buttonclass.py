@@ -8,14 +8,14 @@ class button(object):
 		self.textb = text_button
 		self.txtsize = text_size
 		self.colorb = color
+		self.buttonlabel = pg.font.Font(None, self.txtsize)
+		size = self.buttonlabel.size(self.textb)
+		self.button_surface = pg.Surface(size)
+		self.button_rec = pg.Rect(self.xlocb, self.ylocb, size[0], size[1])
 
 	
 	def draw_button(self, place):
-		buttonlabel = pg.font.Font(None, self.txtsize)
-		size = buttonlabel.size(self.textb)
-		self.buttonlabel = buttonlabel.render(self.textb, 1, self.colorb, (44, 44, 44))
-		self.button_rec = pg.Rect(self.xlocb, self.ylocb, size[0], size[1])
-		self.button_surface = pg.Surface(size)
+		self.buttonlabel = self.buttonlabel.render(self.textb, 1, self.colorb, (44, 44, 44))
 		self.button_surface.fill(self.colorb)		
 		place.blit(self.button_surface, self.button_rec)
 		place.blit(self.buttonlabel, self.button_rec)

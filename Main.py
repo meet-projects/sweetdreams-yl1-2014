@@ -33,6 +33,34 @@ if __name__=="__main__":
     numcic = 0
     numvic = 0
     numsic = 0
+
+    button_ccplu=buttonclass.button(350, 150, 50, 50, " + ", 50, (210, 105, 30))
+    button_ccmin=buttonclass.button(350, 200, 50, 50, "  -  ", 50, (210, 105, 30))
+    button_vcplu=buttonclass.button(350, 300, 50, 50, " + ", 50, (225,225,240))
+    button_vcmin=buttonclass.button(350, 350, 50, 50, "  -  ", 50, (225,225,240))
+    button_scplu=buttonclass.button(350, 450, 50, 50, " + ", 50, (219,112,147))
+    button_vc_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
+    button_sc=buttonclass.button(50, 450, 300, 100, "Strawberry Cake", 53, (219,112,147))
+    button_scmin=buttonclass.button(350, 500, 50, 50, "  -  ", 50, (219,112,147))
+    button_sc_num=buttonclass.button(400, 450, 50, 50, " " + str(numsic) + " ", 70, (219,112,147))
+
+    button_cicplu=buttonclass.button(350, 150, 50, 50, " + ", 50, (210, 105, 30))
+    button_cicmin=buttonclass.button(350, 200, 50, 50, "  -  ", 50, (210, 105, 30))
+    button_vicplu=buttonclass.button(350, 300, 50, 50, " + ", 50, (225,225,240))
+    button_vicmin=buttonclass.button(350, 350, 50, 50, "  -  ", 50, (225,225,240))
+    button_sicplu=buttonclass.button(350, 450, 50, 50, " + ", 50, (219,112,147))
+    button_vic_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
+    button_sic=buttonclass.button(50, 450, 300, 100, "Strawberry Ice Cream", 40, (219,112,147))
+    button_sicmin=buttonclass.button(350, 500, 50, 50, "  -  ", 50, (219,112,147))
+    button_sic_num=buttonclass.button(400, 450, 50, 50, " " + str(numsic) + " ", 70, (219,112,147))
+
+
+
+
+
+
+
+    
     
 
     while True: 
@@ -75,10 +103,10 @@ if __name__=="__main__":
                 buttonclass.button.draw_button(button_cc, main_screen)
 ###############
 
-                button_ccplu=buttonclass.button(350, 150, 50, 50, " + ", 50, (210, 105, 30))
+                
                 buttonclass.button.draw_button(button_ccplu, main_screen)
 
-                button_ccmin=buttonclass.button(350, 200, 50, 50, "  -  ", 50, (210, 105, 30))
+                
                 buttonclass.button.draw_button(button_ccmin, main_screen)
 
                 button_cc_num=buttonclass.button(400, 150, 50, 50, " " + str(numcc) + " ", 70, (210, 105, 30))
@@ -88,25 +116,25 @@ if __name__=="__main__":
                 button_vc=buttonclass.button(50, 300, 300, 100, "Vanilla Cake", 70, (225,225,240))
                 buttonclass.button.draw_button(button_vc, main_screen)
 
-                button_vcplu=buttonclass.button(350, 300, 50, 50, " + ", 50, (225,225,240))
+                
                 buttonclass.button.draw_button(button_vcplu, main_screen)
 
-                button_vcmin=buttonclass.button(350, 350, 50, 50, "  -  ", 50, (225,225,240))
+               
                 buttonclass.button.draw_button(button_vcmin, main_screen)
 
-                button_vc_num=buttonclass.button(400, 300, 50, 50, " " + str(numvc) + " ", 70, (225,225,240))
+
                 buttonclass.button.draw_button(button_vc_num, main_screen)
 
-                button_sc=buttonclass.button(50, 450, 300, 100, "Strawberry Cake", 53, (219,112,147))
+               
                 buttonclass.button.draw_button(button_sc, main_screen)
 
-                button_scplu=buttonclass.button(350, 450, 50, 50, " + ", 50, (219,112,147))
+                
                 buttonclass.button.draw_button(button_scplu, main_screen)
 
-                button_scmin=buttonclass.button(350, 500, 50, 50, "  -  ", 50, (219,112,147))
+               
                 buttonclass.button.draw_button(button_scmin, main_screen)
 
-                button_sc_num=buttonclass.button(400, 450, 50, 50, " " + str(numsc) + " ", 70, (219,112,147))
+               
                 buttonclass.button.draw_button(button_sc_num, main_screen)
                 '''     
                 elif button_cc.button_rec.collidepoint(x, y):
@@ -122,7 +150,7 @@ if __name__=="__main__":
                 numcc-=1
                 print "sss"
                 button_cc_num=buttonclass.button(400, 150, 50, 50, " " + str(numcc) + " " , 70, (210, 105, 30))
-                buttonclass.button.onlyblit(button_cc_num, main_screen)
+                buttonclass.button.draw_button(button_cc_num, main_screen)
                 '''     
                 elif button_vc.button_rec.collidepoint(x, y):
                 image5=imagesclass.image(50, 500, "vc.png")
@@ -135,6 +163,9 @@ if __name__=="__main__":
 
             elif button_vcmin.button_rec.collidepoint(x, y):
                 numvc-=1
+                if numvc<0:
+                    numvc=0
+
                 button_vc_num=buttonclass.button(400, 300, 50, 50, " " + str(numvc) + " ", 70, (225,225,240))
                 buttonclass.button.draw_button(button_vc_num, main_screen)
                 ''' 
@@ -154,101 +185,109 @@ if __name__=="__main__":
             
             
 
-            elif button_finc.button_rec.collidepoint(x, y):
-                clear()
+
                                                                                                                                                                             ###
                                                                                                                                                                         ######
           ##                                                                                                                                                    ######   ##       #   #
             ##                                      ########                                                  ##########                 ###########       ###
                 #################################################################################
                              #######                                             #########                                                    ###########
-                                                                                                                                                                   ########                
+
 
 
 
             elif button_icmain.button_rec.collidepoint(x, y):
-                button_icmain.clear_button(main_screen)
                 button_cmain.clear_button(main_screen)
+                button_icmain.clear_button(main_screen)
                 clear()
+                
+
+                button_finic=buttonclass.button(450, 50, 59, 20, "Finish", 30, (238, 130, 238))
+                buttonclass.button.draw_button(button_finic, main_screen)
 
                 button_cic=buttonclass.button(50, 150, 300, 100, "Chocolate Ice Cream", 40, (210, 105, 30))
                 buttonclass.button.draw_button(button_cic, main_screen)
+###############
 
-                button_cicplu=buttonclass.button(350, 150, 50, 50, " + ", 50, (210, 105, 30))
+                
                 buttonclass.button.draw_button(button_cicplu, main_screen)
 
-                button_cicmin=buttonclass.button(350, 200, 50, 50, "  -  ", 50, (210, 105, 30))
+                
                 buttonclass.button.draw_button(button_cicmin, main_screen)
 
-                button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcic) + " ", 70, (210, 105, 30))
+                button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcc) + " ", 70, (210, 105, 30))
                 buttonclass.button.draw_button(button_cic_num, main_screen)
-                
-                if button_cic.button_rec.collidepoint(x, y):
-                    image_cic=imagesclass.image(500, 500, "cic.png")
-                    image_cic.draw_image(main_screen)
-#########
-                if button_cicplu.button_rec.collidepoint(x, y):
-                    numcic+=1
-                    button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcic) + " ", 70, (210, 105, 30))
-                    buttonclass.button.draw_button(button_cic_num, main_screen)
 
-                if button_cicmin.button_rec.collidepoint(x, y):
-                    numcic-=1
-                    button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcic) + " ", 70, (210, 105, 30))
-                    buttonclass.button.draw_button(button_cic_num, main_screen)
-#########
-                button_vic=buttonclass.button(50, 300, 300, 100, "Vanilla Ice Cream", 50, (225,225,240))
+
+                button_vic=buttonclass.button(50, 300, 300, 100, "Vanilla Ice Cream", 40, (225,225,240))
                 buttonclass.button.draw_button(button_vic, main_screen)
 
-                button_vicplu=buttonclass.button(350, 300, 50, 50, " + ", 50, (225,225,240))
+                
                 buttonclass.button.draw_button(button_vicplu, main_screen)
 
-                button_vicmin=buttonclass.button(350, 350, 50, 50, "  -  ", 50, (225,225,240))
+               
                 buttonclass.button.draw_button(button_vicmin, main_screen)
 
+
+                buttonclass.button.draw_button(button_vic_num, main_screen)
+
+               
+                buttonclass.button.draw_button(button_sic, main_screen)
+
+                
+                buttonclass.button.draw_button(button_sicplu, main_screen)
+
+               
+                buttonclass.button.draw_button(button_sicmin, main_screen)
+
+               
+                buttonclass.button.draw_button(button_sic_num, main_screen)
+                '''     
+                elif button_cc.button_rec.collidepoint(x, y):
+                image4=imagesclass.image(50, 500, "cc.png")
+                image4.draw_image(main_screen)
+                '''
+            elif button_cicplu.button_rec.collidepoint(x, y):
+                numcic+=1
+                button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcic) + " ", 70, (210, 105, 30))
+                buttonclass.button.draw_button(button_cic_num, main_screen)
+
+            elif button_cicmin.button_rec.collidepoint(x, y):
+                numcc-=1
+                print "sss"
+                button_cic_num=buttonclass.button(400, 150, 50, 50, " " + str(numcic) + " " , 70, (210, 105, 30))
+                buttonclass.button.draw_button(button_cic_num, main_screen)
+                '''     
+                elif button_vc.button_rec.collidepoint(x, y):
+                image5=imagesclass.image(50, 500, "vc.png")
+                image5.draw_image(main_screen)
+                '''
+            elif button_vicplu.button_rec.collidepoint(x, y):
+                numvc+=1
                 button_vic_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
                 buttonclass.button.draw_button(button_vic_num, main_screen)
 
-                if button_vic.button_rec.collidepoint(x, y):
-                    image14=imagesclass.image(500, 500, "vic.png")
-                    image14.draw_image(main_screen)
+            elif button_vicmin.button_rec.collidepoint(x, y):
+                numvic-=1
+                if numvic<0:
+                    numvic=0
 
-                if button_vicplu.button_rec.collidepoint(x, y):
-                    numvic+=1
-                    button_vic_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
-                    buttonclass.button.draw_button(button_vic_num, main_screen)
-
-                if button_vicmin.button_rec.collidepoint(x, y):
-                    numvic-=1
-                    button_vic_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
-                    buttonclass.button.draw_button(button_vic_num, main_screen)
-                
-                button_sic=buttonclass.button(50, 450, 300, 100, "Strawberry Ice Cream", 40, (219,112,147))
-                buttonclass.button.draw_button(button_sic, main_screen)
-
-                button_sicplu=buttonclass.button(350, 450, 50, 50, " + ", 50, (219,112,147))
-                buttonclass.button.draw_button(button_sicplu, main_screen)
-
-                button_sicmin=buttonclass.button(350, 500, 50, 50, "  -  ", 50, (219,112,147))
-                buttonclass.button.draw_button(button_sicmin, main_screen)
-
+                button_vic_num=buttonclass.button(400, 300, 50, 50, " " + str(numvic) + " ", 70, (225,225,240))
+                buttonclass.button.draw_button(button_vic_num, main_screen)
+                ''' 
+                elif button_sc.button_rec.collidepoint(x, y):
+                image6=imagesclass.image(50, 500, "sc.png")
+                image6.draw_image(main_screen)
+                '''
+            elif button_sicplu.button_rec.collidepoint(x, y):
+                numsic+=1
                 button_sic_num=buttonclass.button(400, 450, 50, 50, " " + str(numsic) + " ", 70, (219,112,147))
                 buttonclass.button.draw_button(button_sic_num, main_screen)
-                
-                if button_sic.button_rec.collidepoint(x, y):
-                    image15=imagesclass.image(500, 500, "sic.png")
-                    image15.draw_image(main_screen)
 
-                if button_sicplu.button_rec.collidepoint(x, y):
-                    numcic+=1
-                    button_sic_num=buttonclass.button(400, 450, 50, 50, " "+ str(numsic) + " ", 70, (219,112,147))
-                    buttonclass.button.draw_button(button_sic_num, main_screen)
-
-                if button_sicmin.button_rec.collidepoint(x, y):
-                    numcic-=1
-                    button_sic_num=buttonclass.button(400, 450, 50, 50, " " + str(numsic) + " ", 70, (219,112,147))
-                    buttonclass.button.draw_button(button_sic_num, main_screen)
-
+            elif button_sicmin.button_rec.collidepoint(x, y):
+                numsic-=1
+                button_sic_num=buttonclass.button(400, 450, 50, 50, " " + str(numsic) + " ", 70, (219,112,147))
+                buttonclass.button.draw_button(button_sic_num, main_screen)
                 
         pg.display.flip()
 
