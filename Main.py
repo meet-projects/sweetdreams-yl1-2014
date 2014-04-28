@@ -16,7 +16,7 @@ if __name__=="__main__":
     main_screen.fill((255,255,255))
     image1=imagesclass.image(50, 500, "pygame_tiny.png")
     image1.draw_image(main_screen)
-    button1=buttonclass.button(200, 300, 200, 60, " Enter ", 90, (0, 191, 255))
+    button1=buttonclass.button(200, 300, 200, 60, "Enter", 90, (0, 191, 255))
     buttonclass.button.draw_button(button1, main_screen)
     print ""
     label1 = labels.label((123,43,200), 200, 200, 40, 100, "Welcome To Sweet Dreams", 60)
@@ -58,7 +58,7 @@ if __name__=="__main__":
                 button_icmain=buttonclass.button(350, 350, 200, 100, " Ice cream", 59, (0, 191, 255))
                 buttonclass.button.draw_button(button_icmain, main_screen)
 
-                label2 = labels.label((255,0,0), 200, 200, 200, 100, "Choose Your Fate", 33)
+                label2 = labels.label((123,43,200), 200, 200, 80, 100, "Choose Your Fate", 70)
                 label2.draw_label(main_screen)
 
 
