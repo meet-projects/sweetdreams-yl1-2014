@@ -108,11 +108,11 @@ if __name__=="__main__":
 
                 button_sc_num=buttonclass.button(400, 450, 50, 50, " " + str(numsc) + " ", 70, (219,112,147))
                 buttonclass.button.draw_button(button_sc_num, main_screen)
-                
-            elif button_cc.button_rec.collidepoint(x, y):
+                '''     
+                elif button_cc.button_rec.collidepoint(x, y):
                 image4=imagesclass.image(50, 500, "cc.png")
                 image4.draw_image(main_screen)
-
+                '''
             elif button_ccplu.button_rec.collidepoint(x, y):
                 numcc+=1
                 button_cc_num=buttonclass.button(400, 150, 50, 50, " " + str(numcc) + " ", 70, (210, 105, 30))
@@ -123,13 +123,11 @@ if __name__=="__main__":
                 print "sss"
                 button_cc_num=buttonclass.button(400, 150, 50, 50, " " + str(numcc) + " " , 70, (210, 105, 30))
                 buttonclass.button.onlyblit(button_cc_num, main_screen)
-
-                
-                
-            elif button_vc.button_rec.collidepoint(x, y):
+                '''     
+                elif button_vc.button_rec.collidepoint(x, y):
                 image5=imagesclass.image(50, 500, "vc.png")
                 image5.draw_image(main_screen)
-
+                '''
             elif button_vcplu.button_rec.collidepoint(x, y):
                 numvc+=1
                 button_vc_num=buttonclass.button(400, 300, 50, 50, " " + str(numvc) + " ", 70, (225,225,240))
@@ -139,13 +137,11 @@ if __name__=="__main__":
                 numvc-=1
                 button_vc_num=buttonclass.button(400, 300, 50, 50, " " + str(numvc) + " ", 70, (225,225,240))
                 buttonclass.button.draw_button(button_vc_num, main_screen)
-
-                
-                
-            elif button_sc.button_rec.collidepoint(x, y):
+                ''' 
+                elif button_sc.button_rec.collidepoint(x, y):
                 image6=imagesclass.image(50, 500, "sc.png")
                 image6.draw_image(main_screen)
-
+                '''
             elif button_scplu.button_rec.collidepoint(x, y):
                 numsc+=1
                 button_sc_num=buttonclass.button(400, 450, 50, 50, " " + str(numsc) + " ", 70, (219,112,147))
