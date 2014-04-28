@@ -15,7 +15,3 @@ class image(object):
                         clear_image_surface = pg.Surface([self.width,self.height])
                         clear_image_surface.fill((255,255,255))
                         place.blit(clear_image_surface, self.image_surface)
-
-		
-		
-

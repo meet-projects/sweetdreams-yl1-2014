@@ -17,7 +17,3 @@ class label(object):
 		clear_label_surface = pg.Surface([self.sizex,self.sizey])
 		clear_label_surface.fill((255,255,255))
 		place.blit(self.label_surface, self.label_rec)
-
-
-
-
